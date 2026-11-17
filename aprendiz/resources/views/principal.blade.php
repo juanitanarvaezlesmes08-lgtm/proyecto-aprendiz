@@ -1,32 +1,34 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Sistema de Gestion Odontologica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión Odontológica</title>
+    @vite(['resources/css/estilos.css', 'resources/css/estilosPlantilla.css'])
 </head>
-
 <body>
-    <div id="contenedor">
-        <div id="encabezado">
-            <h1>Sistema de Gestin Odontologica</h1>
-        </div>
-        <ul id="menu">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Asignar</a></li>
-            <li><a href="">Consultar Cita</a></li>
-            <li><a href="">Cancelar Cita</a></li>
-            <li><a href="">Iniciar Sesion</a></li>
-        </ul>
-        <div id="contenido">
-            <h2>Informacion General</h2>
-            <p>El Sistema de Gestion Odontologica permite administrar la informacion de los pacientes, tratamientos y citas a traves de una interfaz web.</p>
-            <p>El sistema cuenta con las siguientes secciones:
+    <main id="contenedor">
+        <header id="encabezado">
+            <h1>Sistema de Gestión Odontológica</h1>
+        </header>
+
+        <nav aria-label="Navegación principal">
+            <ul id="menu">
+                <li><a href="{{ route('home') }}" aria-current="page">Inicio</a></li>
+                <li><a href="{{ route('iniciarsesion') }}">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+
+        <section id="contenido" aria-labelledby="titulo-contenido">
+            <h2 id="titulo-contenido">Información general</h2>
+            <p>El sistema de gestión odontológica permite administrar la información de los pacientes, los tratamientos y las citas.</p>
+            <p>Las opciones de gestión de citas estarán disponibles cuando se implementen sus páginas:</p>
             <ul>
                 <li>Asignar cita</li>
                 <li>Consultar cita</li>
                 <li>Cancelar cita</li>
             </ul>
-            </p>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 </html>
